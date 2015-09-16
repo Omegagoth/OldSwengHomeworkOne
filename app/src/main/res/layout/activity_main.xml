@@ -5,11 +5,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+    <TextView android:text="@string/welcome_message" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:singleLine="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -18,17 +21,17 @@
         android:text="Name"
         android:ems="10"
         android:id="@+id/mainName"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Go !"
         android:id="@+id/mainGoButton"
-        android:layout_above="@+id/textView"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp" />
+        android:onClick="goGreetings" />
 
 </RelativeLayout>
