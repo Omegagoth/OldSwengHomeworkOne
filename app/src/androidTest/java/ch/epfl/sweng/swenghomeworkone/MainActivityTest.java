@@ -23,6 +23,6 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
         getActivity();
         onView(withId(R.id.mainName)).perform(typeText("from my unit test"));
         onView(withId(R.id.mainGoButton)).perform(click());
-        //onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
+        onView(withId(R.id.greetingMessage)).check(matches(withText("Hello from my unit test!")));
     }
 }

@@ -1,16 +1,28 @@
 package ch.epfl.sweng.swenghomeworkone;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class GreetingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_greeting);
+        //setContentView(R.layout.activity_greeting);
+        Intent intent = getIntent();
+        String userName = intent.getStringExtra(MainActivity.EXTRA_USER_NAME);
+
+        // Create the TextView
+        TextView textView = new TextView(this);
+        textView.setTextSize(40);
+        textView.setText("Hello " + userName + "!");
+
+        // Set the text view as the activity layout
+        setContentView(textView);
     }
 
     @Override

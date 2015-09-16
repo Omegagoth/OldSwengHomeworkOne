@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Called when the user clicks the go button */
-    public void sendMessage(View view) {
+    public void goGreetings(View view) {
         Intent intent = new Intent(this, GreetingActivity.class);
         EditText tempText = (EditText) findViewById(R.id.mainName);
 
