@@ -4,4 +4,5 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_greeting">GreetingActivity</string>
     <string name="welcome_message">Welcome to my awesome app !</string>
+    <string name="greetingsMessage">Hello </string>
 </resources>

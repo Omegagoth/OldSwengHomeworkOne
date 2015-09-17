@@ -1,10 +1,8 @@
 package ch.epfl.sweng.swenghomeworkone;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class GreetingActivity extends AppCompatActivity {
@@ -12,38 +10,17 @@ public class GreetingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_greeting);
+        // Set the greetings activity view as the activity layout
+        setContentView(R.layout.activity_greeting);
+
+        // Recuperation of the intent
         Intent intent = getIntent();
         String userName = intent.getStringExtra(MainActivity.EXTRA_USER_NAME);
 
+
         // Create the TextView
-        TextView textView = new TextView(this);
+        TextView textView = (TextView) findViewById(R.id.greetingMessage);
         textView.setTextSize(40);
         textView.setText("Hello " + userName + "!");
-
-        // Set the text view as the activity layout
-        setContentView(textView);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_greeting, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
